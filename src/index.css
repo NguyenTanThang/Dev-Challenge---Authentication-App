@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*Input Group With Icon*/
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input-group__icon {
+  flex: 40px;
+  max-width: 40px;
+  text-align: center;
+}
+
+.input-group__icon span {
+  color: #616475;
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+.input-group__input {
+  flex: calc(100% - 40px);
+  max-width: calc(100% - 40px);
+}
+
+.input-group__input input {
+  border: none;
+  width: 100%;
+  padding: 13px;
+  display: block;
+  outline: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #616475;
 }

@@ -1,38 +1,358 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2F80ED;
+  color: #FFF;
+  border: 1px solid #2F80ED;
+}
+
+.btn-grey {
+  background: transparent;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: #828282;
+}
+
+.btn-primary:hover {
+  background: #FFF;
+  color: #2F80ED;
+}
+
+.btn-grey:hover {
+  background: #828282;
+  color: #fff;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.container {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*Login & Sign up Page*/
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width: 480px;
+  display: inline-block;
+  
+}
+
+.login-container {
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid #BDBDBD;
+}
+
+.login-container__header img {
+  margin-bottom: 20px;
+}
+
+.login-container__header h3 {
+  margin-bottom: 20px;
+}
+
+.login-container__header p {
+  margin-bottom: 20px;
+  color: #828282;
+}
+
+.login-container__body {
+  margin-bottom: 20px;
+}
+
+.login-container__body #login-form .form-group {
+  margin-bottom: 10px;
+}
+
+.login-container__body p {
+  margin-top: 10px;
+  color: #828282;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container__auth ul {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.login-container__auth ul li {
+  cursor: pointer;
+}
+
+.login-container__footer p {
+  color: #828282;
+  text-align: center;
+}
+
+.login-container__footer p a {
+  color: #2F80ED;
+}
+
+.login-footer {
+  margin-top: 10px;
+}
+
+.login-footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-footer ul li {
+  color: #828282;
+}
+
+/*Navbar*/
+.navbar {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-profile {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-profile img {
+  padding-right: 10px;
+  width: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-profile p {
+  padding-right: 10px;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.navbar-profile span {
+  margin-top: 3px;
+}
+
+.navbar-expand-tab {
+  position: absolute;
+  right: 70px;
+  top: 70px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  width: 188px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.navbar-expand-tab .divider {
+  height: 1px;
+  width: 100%;
+  background-color: #E0E0E0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-expand-tab__item a {
+  display: flex;
+  padding: 10px;
+  padding-top: 15px;
+  border-radius: 8px;
+  color: #4F4F4F;
+}
+
+.navbar-expand-tab__item--danger a {
+  color: #EB5757;
+}
+
+.navbar-expand-tab__item a:hover {
+  background: #F2F2F2;
+}
+
+.navbar-expand-tab__item a .icon {
+  padding-right: 10px;
+}
+
+/*Profile*/
+.profile-page {
+  padding-bottom: 50px;
+}
+
+.profile-wrapper .container {
+  max-width: 845px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-wrapper__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-wrapper__header h2 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.profile-wrapper__header h5 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.profile-wrapper__body {
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+}
+
+.profile-wrapper-body__item {
+  padding: 30px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.profile-wrapper-body__item:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-wrapper-body__item:first-child h4 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.profile-wrapper-body__item:first-child p {
+  color: #828282;
+  font-weight: 500;
+}
+
+.profile-wrapper-body__item:last-child {
+  border-bottom: none;
+}
+
+.profile-wrapper-body__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-wrapper-body__item .left {
+  flex: 40%;
+  max-width: 40%;
+}
+
+.profile-wrapper-body__item .right {
+  flex: 60%;
+  max-width: 60%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.profile-wrapper-body__item:first-child .right {
+  text-align: right;
+}
+
+/*Edit Profile*/
+.edit-profile-page .profile-wrapper__header {
+  text-align: left;
+}
+
+.edit-profile-page .profile-wrapper__header a {
+  display: inline-flex;
+  align-items: center;
+  color: #2D9CDB;
+}
+
+.edit-profile-page .profile-wrapper__header a .content {
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.edit-profile-page .profile-wrapper__body {
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.profile-wrapper-body__header {
+  text-align: left;
+}
+
+.profile-wrapper-body__header h5 {
+  color: #828282;
+  font-size: 1rem;
+}
+
+#edit-profile-form {
+  max-width: 50%;
+}
+
+#edit-profile-form .form-group {
+  margin-bottom: 30px;
+}
+
+/*Form*/
+.form-group label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px;
+  display: block;
+  outline: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 1rem;
+  border: 1px solid #BDBDBD;
+  border-radius: 12px;
 }
